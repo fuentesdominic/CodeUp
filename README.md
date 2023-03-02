@@ -5,12 +5,9 @@
 ### By: Tina Yang, Dominic Fuentes, Hector Flores and Ryan Cho.
 
 #### [TinaYangLinkedIn](https://www.linkedin.com/in/yang-tina/) l [TinaYangGitHub](https://github.com/tinayang15)
-
 #### [DominicFuentesLinkedIn](https://www.linkedin.com/in/dominicfuentes1/) l [DominicFuentesGitHub](https://github.com/fuentesdominic)
-
 #### [HectorFloresLinkedIn](https://www.linkedin.com/in/hector-floresm/) l [HectorFloresGitHub](https://github.com/hekmaflo/hekmaflo)
-
-#### [RyanChoLinkedIn](https://www.linkedin.com/in/ryan-wongene-cho/) l [RyanChoGitHub](Link Needed)
+#### [RyanChoLinkedIn](https://www.linkedin.com/in/ryan-wongene-cho/) l [RyanChoGitHub](https://github.com/notryancho)
 
 ## ***Description***
 ***
