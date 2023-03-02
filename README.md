@@ -1,1 +1,4 @@
-# codeup
+# CodeUp
+
+
+Ryan Cho
