@@ -1,4 +1,3 @@
-# CodeUp
-
+# codeup
 
 Ryan Cho
