@@ -5,6 +5,9 @@ import Home from './pages/Home'
 import Category from './pages/Category';
 import Task from './pages/Task';
 import Navbar from './components/Navbar'
+import SignIn from './pages/SignIn';
+import Register from './pages/Register';
+import Notes from './components/Notes';
 
 function App() {
   return (
@@ -12,10 +15,13 @@ function App() {
       <Navbar />
       <main>
         <Routes>
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/register' element={<Register />} />
           <Route path='/' element={<Home />} />
-          {/* <Route path='/signin' element={} /> */}
-          <Route path='/:category' element={<Category />} />
+          <Route path='/about' element={<About />}/>
+          {/* <Route path='/:category' element={<Category />} /> */}
           <Route path='/:category/:task' element={<Task />} />
+          <Route path='/:category/:task/:notes' element={<Notes />} />
         </Routes>
         
       </main>
