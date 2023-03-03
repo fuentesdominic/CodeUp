@@ -16,7 +16,7 @@
 
 ---
 
-#### CodeUp is an application designed for software engineers to monitor their educational progress and skill acquisition. With CodeUp, users can easily create an account, log in to their dashboard, and keep track of their skills and lessons.
+#### CodeUp is an application designed for software engineers to monitor their educational progress and skill acquisition. With CodeUp, users can easily create an account, log in to their dashboard, and keep track and make note of their skills and lessons.
 
 ## **_Getting Started_**
 
@@ -31,6 +31,11 @@
 - Create a user.
 - Login and see your dashboard
 - Keep track of your skills and lessons
+- Be able to make notes for each lesson
+
+* Create a user.
+* Login and see your dashboard
+* Keep track of your skills and lessons
 
 ## **_Technologies Used_**
 
