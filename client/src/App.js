@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
 import Notes from './components/Notes';
+import About from './components/About'
 
 function App() {
   return (
@@ -18,12 +19,12 @@ function App() {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/register' element={<Register />} />
           <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />}/>
+          <Route path='/about' element={<About />} />
           {/* <Route path='/:category' element={<Category />} /> */}
           <Route path='/:category/:task' element={<Task />} />
           <Route path='/:category/:task/:notes' element={<Notes />} />
         </Routes>
-        
+
       </main>
     </div>
   );
