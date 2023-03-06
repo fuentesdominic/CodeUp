@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { SignInUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
-const SignIn = ({ setUser }) => {
+const SignIn = ({ setUser, toggleAuthenticated }) => {
   
 let navigate = useNavigate()
 
@@ -17,7 +17,8 @@ let navigate = useNavigate()
     const payload = await SignInUser(formValues)
     setFormValues({ email: '', password: ''})
     setUser(payload)
-    navigate('/feed')
+    toggleAuthenticated(true)
+    navigate('/home')
   }
 
   return (

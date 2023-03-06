@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { RegisterUser } from '../services/Auth' 
 import { useNavigate } from 'react-router-dom' 
-// import axios from 'axios'
+
 
 const Register = () => {
 
@@ -32,6 +32,7 @@ const Register = () => {
       confirmPassword: ''
     })
     navigate('/signin') 
+    console.log(formValues)
   }
 
   return (
@@ -88,7 +89,7 @@ const Register = () => {
                 formValues.confirmPassword === formValues.password)
             }
           >
-            Sign In
+            Confirm
           </button>
         </form>
       </div>
