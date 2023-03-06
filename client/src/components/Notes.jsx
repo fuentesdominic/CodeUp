@@ -6,6 +6,19 @@ const Notes = () => {
   const [notes, setNotes] = useState('')
   const { taskId } = useParams()
 
+  const getNotes = async (e) => {
+    try {
+      let res = await axios.get(`/api/${taskId}/notes`)
+      setNotes(res)
+      console.log(res)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  useEffect(() => {
+    getNotes()
+  }, [])
 
 
 
