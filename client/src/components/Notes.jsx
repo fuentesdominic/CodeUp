@@ -35,6 +35,13 @@ const Notes = () => {
             <Link to={`/task/${taskId}/note/${userTaskId}`} state={{ origNote: note }}>
               <button>Edit Note</button>
             </Link>
+            <FaTrashAlt
+              onClick={() => handleDelete()}
+              role='button'
+              tabIndex='0'
+              aria-label={`Delete ${userTaskId}`}
+              className='delete'
+            />
           </div>
         )
         )}
