@@ -32,7 +32,9 @@ const Notes = () => {
         {userTask.map((note) => (
           <div className="note">
             <h1>{note.notes}</h1>
-
+            <Link to={`/task/${taskId}/note/${userTaskId}`} state={{ editNote: note }}>
+              <button>Edit Note</button>
+            </Link>
           </div>
         )
         )}
