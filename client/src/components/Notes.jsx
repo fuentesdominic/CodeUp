@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { FaTrashAlt } from 'react-icons/fa'
 import axios from 'axios'
 
 const Notes = () => {
   const [notes, setNotes] = useState('')
+  const { userTaskId } = useParams()
   const { taskId } = useParams()
 
   const getNotes = async (e) => {
     try {
-      let res = await axios.get(`/api/${taskId}/notes`)
-      setNotes(res)
+      let res = await axios.get(`/usrtasks/`)
+      setNotes(res.data)
       console.log(res)
     } catch (err) {
       console.log(err)
@@ -20,7 +22,10 @@ const Notes = () => {
     getNotes()
   }, [])
 
-
+  const handleDelete = async (id) => {
+    await axios.delete(`/`)
+    getNotes()
+  }
 
   return (
     <div className='notes'>
@@ -29,17 +34,17 @@ const Notes = () => {
         <button className='addNote'>+ Add Note</button>
       </Link>
       <div className="notesContainer">
-        {userTask.map((note) => (
+        {notes.map((note) => (
           <div className="note">
             <h1>{note.notes}</h1>
-            <Link to={`/task/${taskId}/note/${userTaskId}`} state={{ origNote: note }}>
+            <Link to={`/task/${taskId}/note/${note._id}`} state={{ origNote: note }}>
               <button>Edit Note</button>
             </Link>
             <FaTrashAlt
               onClick={() => handleDelete()}
               role='button'
               tabIndex='0'
-              aria-label={`Delete ${userTaskId}`}
+              aria-label={`Delete ${note._id}`}
               className='delete'
             />
           </div>
