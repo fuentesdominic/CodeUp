@@ -11,6 +11,7 @@ import Notes from './components/Notes';
 import About from './components/About'
 
 function App() {
+  
   return (
     <div>
       <Navbar />
