@@ -29,7 +29,13 @@ const Notes = () => {
         <button className='addNote'>+ Add Note</button>
       </Link>
       <div className="notesContainer">
+        {userTask.map((note) => (
+          <div className="note">
+            <h1>{note.notes}</h1>
 
+          </div>
+        )
+        )}
       </div>
     </div>
   )
