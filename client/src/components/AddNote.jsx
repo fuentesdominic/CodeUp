@@ -7,7 +7,20 @@ const AddNote = () => {
     const { taskId } = useParams()
     const [newNote, setNewNote] = useState({ notes: '' })
 
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const newNotePackage = {
+            notes: newNote.notes
+        }
+        const response = await axios.post('/userId/:taskId', newNotePackage)
+        navigate(`/tasks/:taskId/notes`)
+    }
 
+    const handleChange = (e) => {
+        setNewNote({
+            [e.target.name]: e.target.value
+        })
+    }
 
     return (
         <main>
