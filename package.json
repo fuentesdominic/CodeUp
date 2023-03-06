@@ -1,0 +1,19 @@
+{
+  "name": "codeup",
+  "version": "1.0.0",
+  "description": "## Date: March 2, 2023",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuentesdominic/CodeUp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuentesdominic/CodeUp/issues"
+  },
+  "homepage": "https://github.com/fuentesdominic/CodeUp#readme"
+}
