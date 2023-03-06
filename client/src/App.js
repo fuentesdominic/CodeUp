@@ -11,6 +11,7 @@ import Notes from './components/Notes';
 import About from './components/About'
 
 function App() {
+
   return (
     <div>
       <Navbar />
@@ -21,9 +22,10 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           {/* <Route path='/:category' element={<Category />} /> */}
-          <Route path='/:category/:task' element={<Task />} />
+          <Route path='/task/:taskId' element={<Task />} />
           <Route path='/:userTaskId/task/:taskId/notes' element={<Notes />} />
           {/* /:category/:task/:notes */}
+
         </Routes>
 
       </main>
