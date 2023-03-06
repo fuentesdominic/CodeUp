@@ -5,11 +5,12 @@ import { useState } from 'react'
 const EditNote = () => {
     let navigate = useNavigate()
     const location = useLocation()
-    const { editNote } = location.state
-    console.log(editNote)
+    const { origNote } = location.state
+    console.log(origNote)
 
     const { taskId } = useParams()
     const { userTaskId } = useParams()
+    const [updatedNote, setUpdatedNote] = useState({ note: `${origNote.notes}` })
     return (
         <div>EditNote</div>
     )
