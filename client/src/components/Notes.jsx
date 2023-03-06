@@ -25,7 +25,9 @@ const Notes = () => {
   return (
     <div className='notes'>
       <h1 className='noteTitle'>Notes</h1>
-
+      <Link to={`/task/${taskId}/addnote`}>
+        <button className='addNote'>+ Add Note</button>
+      </Link>
       <div className="notesContainer">
 
       </div>
