@@ -22,7 +22,8 @@ function App() {
           <Route path='/about' element={<About />} />
           {/* <Route path='/:category' element={<Category />} /> */}
           <Route path='/:category/:task' element={<Task />} />
-          <Route path='/:category/:task/:notes' element={<Notes />} />
+          <Route path='/:notes' element={<Notes />} />
+          {/* /:category/:task/:notes */}
         </Routes>
 
       </main>
