@@ -8,6 +8,8 @@ const EditNote = () => {
     const { editNote } = location.state
     console.log(editNote)
 
+    const { taskId } = useParams()
+    const { userTaskId } = useParams()
     return (
         <div>EditNote</div>
     )
