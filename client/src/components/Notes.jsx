@@ -4,7 +4,7 @@ import { FaTrashAlt } from 'react-icons/fa'
 import axios from 'axios'
 
 const Notes = () => {
-  const [allNotes, setAllNotes] = useState('')
+  const [allNotes, setAllNotes] = useState([])
   const { userTaskId } = useParams()
   const { taskId } = useParams()
 
@@ -13,7 +13,7 @@ const Notes = () => {
       let res = await axios.get(`/usrtasks/${taskId}`)
       setAllNotes(res.data)
       // console.log(allNotes)
-      // console.log(res)
+      console.log(res)
     } catch (err) {
       console.log(err)
     }
