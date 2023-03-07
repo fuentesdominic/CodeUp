@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 
 const Task = () => {
 
-  const {category} = useParams()
+  const { category } = useParams()
   const [allTasks, setAllTasks] = useState([])
 
   const getAllTasks = async () => {
@@ -25,10 +25,10 @@ const Task = () => {
   return (
     <div>
       {allTasks.map((task) => (
-          <Link to={`/task/${task.id}`}>
-            <h2>{task.title}</h2>
-          </Link>
-       
+        <Link to={`/task/${task.id}`} state={{ lesson: task }}>
+          <h2>{task.title}</h2>
+        </Link>
+
       ))}
     </div>
   )
