@@ -1,0 +1,243 @@
+img.homepageicons {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+
+/* ----------- Google Pixel ----------- */
+
+/* Portrait */
+
+@media screen
+
+and (device-width: 360px)
+
+and (device-height: 640px)
+
+and (-webkit-device-pixel-ratio: 3)
+
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+
+@media screen
+
+and (device-width: 360px)
+
+and (device-height: 640px)
+
+and (-webkit-device-pixel-ratio: 3)
+
+and (orientation: landscape) {
+
+}
+
+@media (min-width: 640px){
+
+  }
+  
+  @media (min-width: 768px){
+  
+  }
+  
+  @media (min-width: 1024px){
+  
+  }
+  
+  @media (min-width: 1200px){
+  
+  }
+
+  /* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 13 Mini ----------- */
+/* 2340x1080 pixels at 476ppi */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- iPhone 13/13 Pro ----------- */
+/* 2532x1170 pixels at 460ppi */
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- iPhone 13 Pro Max ----------- */
+/* 2778x1284 pixels at 458ppi */
+@media only screen 
+    and (device-width: 428px) 
+    and (device-height: 926px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- iPhone X/XR, & 11 ----------- */
+/* 1792x828px at 326ppi */
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {}
+
+/* ----------- iPhone 11 Pro ----------- */
+/* 2436x1125px at 458ppi */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- iPhone 11 Pro Max ----------- */
+/* 2688x1242px at 458ppi */
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- Samsung S4,S5 ----------- */
+@media only screen 
+    and (device-width: 320px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- LG Nexus 4 ----------- */
+@media only screen 
+    and (device-width: 384px) 
+    and (device-height: 592px) 
+    and (-webkit-device-pixel-ratio: 2) {}
+
+/* ----------- LG Nexus 5 ----------- */
+@media only screen 
+    and (device-width: 360px) 
+    and (device-height: 592px) 
+    and (-webkit-device-pixel-ratio: 3) {}
+
+/* ----------- Asus Nexus 7 ----------- */
+@media only screen 
+    and (device-width: 601px) 
+    and (device-height: 906px) 
+    and (-webkit-device-pixel-ratio: 1.33) {}
+
+/* ----------- iPad 1,2,iPad Air,iPad Mini,iPad Pro 9  ----------- */
+@media only screen 
+    and (device-width: 768px) 
+    and (device-height: 1024px) 
+    and (-webkit-device-pixel-ratio: 1) {}
+
+/* ----------- iPad 3,4 ----------- */
+@media only screen 
+    and (device-width: 768px) 
+    and (device-height: 1024px) 
+    and (-webkit-device-pixel-ratio: 2) {}
+
+/* ----------- iPad Pro 10 ----------- */
+@media only screen 
+    and (device-width: 834px) 
+    and (device-height: 1112px) 
+    and (-webkit-device-pixel-ratio: 1) {}
+
+/* ----------- iPad Pro 12 ----------- */
+@media only screen 
+    and (device-width: 1024px) 
+    and (device-height: 1366px) 
+    and (-webkit-device-pixel-ratio: 1) {}
+
+/* ----------- HD laptops ----------- */
+@media only screen 
+    and (device-width: 1366px) {}
+
+/* ----------- 13" Macbook Pro ----------- */
+@media only screen 
+    and (device-width: 1440px) {}
+
+
+    .signin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        }
+        
+        .card-overlay {
+        background-color: white;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        }
+        
+        .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        
+        .col {
+        display: flex;
+        flex-direction: column;
+        }
+        
+        .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        }
+        
+        label {
+        margin-bottom: 10px;
+        }
+        
+        input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f8f8f8;
+        color: #3a3a3a;
+        font-size: 16px;
+        outline: none;
+        }
+        
+        .signin-btn {
+        padding: 10px 20px;
+        background-color: #4c4c4c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        }
+        
+        .signin-btn:hover {
+        background-color: #3d3d3d;
+        }
+
+        
