@@ -25,7 +25,7 @@ const Task = () => {
   return (
     <div>
       {allTasks.map((task) => (
-        <Link to={`/task/${task.id}`} state={{ lesson: task }}>
+        <Link to={`/task/${task.id}`}>
           <h2>{task.title}</h2>
         </Link>
 

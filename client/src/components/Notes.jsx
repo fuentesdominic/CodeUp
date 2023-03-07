@@ -31,12 +31,14 @@ const Notes = () => {
   return (
     <div className='notes'>
       <h1 className='noteTitle'>Notes</h1>
-      <Link to={`/task/${taskId}/addnote`}>
-        <button className='addNote'>+ Add Note</button>
-      </Link>
       <div className="notesContainer">
         {allNotes.map((note) => (
           <div className="note">
+            <Link to={`/task/${taskId}/addnote`}
+            //  state={{ oldNote: note }}
+            >
+              <button className='addNote'>+ Add Note</button>
+            </Link>
             <h1>{note.notes}</h1>
             <Link to={`/task/${taskId}/note/${note._id}`} state={{ origNote: note }}>
               <button>Edit Note</button>
