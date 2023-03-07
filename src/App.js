@@ -59,7 +59,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/tasks/:taskname" element={<Category />} />
+          <Route path="/tasks/:category" element={<Category />} />
           <Route path="/:category/:task/:notes" element={<Notes />} />
           <Route path="/task/:taskId" element={<Task />} />
         </Routes>
