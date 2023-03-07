@@ -23,7 +23,7 @@ const Task = () => {
   }, [])
 
   return (
-    <div>
+    <div className="category">
       {allTasks.map((task) => (
         <Link to={`/task/${task.id}`}>
           <h2>{task.title}</h2>
