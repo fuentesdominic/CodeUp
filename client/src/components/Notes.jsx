@@ -10,9 +10,9 @@ const Notes = () => {
 
   const getNotes = async (e) => {
     try {
-      let res = await axios.get(`/usrtasks/${taskId}/htmlone`)
+      let res = await axios.get(`/usrtasks/${taskId}`)
       setNotes(res.data)
-      console.log(res)
+      // console.log(res)
     } catch (err) {
       console.log(err)
     }
@@ -30,7 +30,7 @@ const Notes = () => {
   return (
     <div className='notes'>
       <h1 className='noteTitle'>Notes</h1>
-      {/* <Link to={`/task/${taskId}/addnote`}>
+      <Link to={`/task/${taskId}/addnote`}>
         <button className='addNote'>+ Add Note</button>
       </Link>
       <div className="notesContainer">
@@ -50,7 +50,7 @@ const Notes = () => {
           </div>
         )
         )}
-      </div> */}
+      </div>
     </div>
   )
 }

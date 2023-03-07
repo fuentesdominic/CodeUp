@@ -1,33 +1,20 @@
-import { useState, useEffect } from "react"
-import { Link } from 'react-router-dom'
-import axios from "axios"
+import Notes from '../components/Notes'
+import { useParams, useLocation } from 'react-router-dom'
 
 const Task = () => {
+  const { taskId } = useParams()
+  const location = useLocation()
+  const { lesson } = location.state
+  // console.log(lesson)
 
-  const [allCategories, setAllCategories] = useState([])
-
-  const getAllCategories = async () => {
-    try {
-      let res = await axios.get(`/tasks/`)
-      setAllCategories(res.data)
-      // console.log(res.data)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-
-  useEffect(() => {
-    getAllCategories()
-  }, [])
 
   return (
-    <div>
-      {allCategories.map((category) => (
-          <Link to={`/task/${category._id}`} state={{task:category}}>
-            <h2 className="homecategories">{category.category}</h2>
-          </Link>
-       
-      ))}
+    <div className='task'>
+      <h1>{lesson.title}</h1>
+      <p>{lesson.content}</p>
+      <a href={lesson.videoLink}></a>
+      <p>Category: {lesson.category}</p>
+      <p>Notes: <Notes taskId={lesson.id} /></p>
     </div>
   )
 }
