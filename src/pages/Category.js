@@ -10,9 +10,9 @@ const Task = () => {
 
   const getAllTasks = async () => {
     try {
-      let res = await axios.get(`/tasks/${category}`)
+      let res = await axios.get(`/tasks/html`)
       setAllTasks(res.data)
-      // console.log(res.data)
+      console.log(res)
     } catch (err) {
       console.log(err)
     }
