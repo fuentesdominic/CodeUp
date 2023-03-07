@@ -6,12 +6,12 @@ import Category from './pages/Category';
 import Navbar from './components/Navbar'
 import SignIn from './pages/SignIn';
 import Register from './pages/Register';
-import Notes from './components/Notes';
 import About from './components/About'
 import Task from './pages/Task'
+import AddNote from './pages/AddNote'
 
 function App() {
-  
+
   return (
     <div>
       <Navbar />
@@ -22,8 +22,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/:category' element={<Category />} />
-          <Route path='/:category/:task/:notes' element={<Notes />} />
-          <Route path='/task/:taskId' element={<Task />}/>
+          <Route path='/task/:taskId' element={<Task />} />
+          <Route path='/task/:taskId/addnote' element={<AddNote />} />
         </Routes>
 
       </main>
