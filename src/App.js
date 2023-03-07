@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Notes from "./components/Notes";
 import About from "./components/About";
 import Task from "./pages/Task";
+import AddNote from './pages/AddNote'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -61,6 +62,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/tasks/:category" element={<Category />} />
           <Route path="/:category/:task/:notes" element={<Notes />} />
+          <Route path="/task/:taskId/addnote" element={<AddNote />} />
           <Route path="/task/:taskId" element={<Task />} />
         </Routes>
       </main>
