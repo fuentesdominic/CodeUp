@@ -4,14 +4,15 @@ import { FaTrashAlt } from 'react-icons/fa'
 import axios from 'axios'
 
 const Notes = () => {
-  const [notes, setNotes] = useState('')
+  const [allNotes, setAllNotes] = useState('')
   const { userTaskId } = useParams()
   const { taskId } = useParams()
 
   const getNotes = async (e) => {
     try {
       let res = await axios.get(`/usrtasks/${taskId}`)
-      setNotes(res.data)
+      setAllNotes(res.data)
+      // console.log(allNotes)
       // console.log(res)
     } catch (err) {
       console.log(err)
@@ -34,7 +35,7 @@ const Notes = () => {
         <button className='addNote'>+ Add Note</button>
       </Link>
       <div className="notesContainer">
-        {notes.map((note) => (
+        {allNotes.map((note) => (
           <div className="note">
             <h1>{note.notes}</h1>
             <Link to={`/task/${taskId}/note/${note._id}`} state={{ origNote: note }}>
