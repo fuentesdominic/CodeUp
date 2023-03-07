@@ -5,9 +5,9 @@ import axios from 'axios'
 
 const Notes = () => {
   const [allNotes, setAllNotes] = useState([])
-  const { userTaskId } = useParams()
+  // const { userTaskId } = useParams()
   const { taskId } = useParams()
-
+  console.log(taskId)
   const getNotes = async (e) => {
     try {
       let res = await axios.get(`/usrtasks/${taskId}`)
