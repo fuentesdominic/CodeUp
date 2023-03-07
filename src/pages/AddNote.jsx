@@ -2,9 +2,9 @@ import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
 
-const AddNote = ({ taskId }) => {
+const AddNote = () => {
     let navigate = useNavigate()
-    // const { taskId } = useParams()
+    const { taskId } = useParams()
     const [newNote, setNewNote] = useState({ notes: '' })
 
     const handleSubmit = async (e) => {
@@ -12,14 +12,14 @@ const AddNote = ({ taskId }) => {
         const newNotePackage = {
             notes: newNote.notes
         }
-        const response = await axios.post(`/usrtasks/${taskId}`, newNotePackage)
+        const response = await axios.put(`/usrtasks/${taskId}`, newNotePackage)
         console.log(response)
-        navigate(`/tasks/${taskId}`)
+        navigate(`/task/${taskId}`)
     }
 
     const handleChange = (e) => {
         setNewNote({
-            [e.target.name]: e.target.value
+            [e.target.id]: e.target.value
         })
     }
 
@@ -30,11 +30,11 @@ const AddNote = ({ taskId }) => {
                 <form onSubmit={handleSubmit} className="newNoteForm">
                     <textarea
                         name="notes"
-                        id="newnotes"
+                        id="notes"
                         value={newNote.notes}
                         onChange={handleChange}
                         required
-                        placeholder='Enter Your Notes'
+                        placeholder={newNote.notes}
                         cols="30" rows="10"></textarea>
                     <button type='submit' className='newNoteSubmit'>Submit</button>
                 </form>

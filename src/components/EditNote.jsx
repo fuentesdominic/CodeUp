@@ -1,7 +1,7 @@
 // import { useLocation, useNavigate, useParams } from 'react-router-dom'
 // import axios from 'axios'
 // import { useState } from 'react'
-
+// // 
 // const EditNote = () => {
 //     let navigate = useNavigate()
 //     const location = useLocation()
@@ -9,16 +9,16 @@
 //     console.log(origNote)
 
 //     const { taskId } = useParams()
-//     const { userTaskId } = useParams()
+//     // const { userTaskId } = useParams()
 //     const [updatedNote, setUpdatedNote] = useState({ notes: `${origNote.notes}` })
 
 //     const handleSubmit = async (e) => {
 //         e.preventDefault()
 //         const updateNotePackage = {
-//             notes: updateNote.notes
+//             notes: updatedNote.notes
 //         }
-//         const response = await axios.put(`/tasks/:taskId/:userTaskId/notes`, updateNotePackage)
-//         navigate(`/tasks/:taskId/notes`)
+//         const response = await axios.put(`/usrtasks/${taskId}`, updateNotePackage)
+//         navigate(`/tasks/${taskId}`)
 //     }
 
 //     const handleChange = (e) => {
