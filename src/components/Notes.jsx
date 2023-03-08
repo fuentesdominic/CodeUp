@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FaTrashAlt } from 'react-icons/fa'
+import { GetNotesById } from '../services/TaskServices'
 import axios from 'axios'
 
 const Notes = () => {
   const [allNotes, setAllNotes] = useState([])
-  // const { userTaskId } = useParams()
+  const { userId } = useParams()
   const { taskId } = useParams()
-  console.log(taskId)
+  // console.log(taskId)
 
 
   const getNotes = async (e) => {
     try {
-      let res = await axios.get(`/usrtasks/${taskId}`)
-      setAllNotes(res.data)
-      // console.log(allNotes)
+      const res = await GetNotesById(taskId, userId)
+      setAllNotes(res)
       console.log(res)
     } catch (err) {
       console.log(err)
