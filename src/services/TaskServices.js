@@ -17,3 +17,14 @@ export const GetNotes = async () => {
     throw error;
   }
 };
+
+export const UpdateNotes = async (taskId, userId, newNotePackage) => {
+  try {
+    const res = await Client.put(`/usrtasks/${taskId}/user/${userId}`, newNotePackage);
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+
