@@ -9,13 +9,14 @@ const AddNote = () => {
     const [newNote, setNewNote] = useState({ notes: '' })
     // GET USERID
     console.log(userId)
+    console.log(taskId)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const newNotePackage = {
             notes: newNote.notes
         }
-        const res = await UpdateNotes(userId, taskId, newNotePackage)
+        const res = await UpdateNotes(taskId, userId, newNotePackage)
         setNewNote(res)
         // console.log(response)
         navigate(`/task/${taskId}/user/${userId}`)

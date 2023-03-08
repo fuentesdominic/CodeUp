@@ -12,6 +12,7 @@ import Notes from "./components/Notes";
 import About from "./components/About";
 import Task from "./pages/Task";
 import AddNote from './pages/AddNote'
+import EditNote from './pages/EditNote'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -61,9 +62,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/tasks/:category" element={<Category />} />
+          <Route path="/task/:taskId/user/:userId" element={<Task />} />
           <Route path="/:category/:task/:notes" element={<Notes />} />
           <Route path="/task/:taskId/user/:userId/addnote" element={<AddNote />} />
-          <Route path="/task/:taskId/user/:userId" element={<Task />} />
+          <Route path="/task/:taskId/user/:userId/editnote" element={<EditNote />} />
         </Routes>
       </main>
     </div>

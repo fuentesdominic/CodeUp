@@ -8,7 +8,8 @@ const Notes = () => {
   const [allNotes, setAllNotes] = useState([])
   const { userId } = useParams()
   const { taskId } = useParams()
-  // console.log(taskId)
+  console.log(taskId)
+  console.log(userId)
 
 
   const getNotes = async (e) => {
@@ -36,12 +37,12 @@ const Notes = () => {
       <div className="notesContainer">
         {allNotes.map((note) => (
           <div className="note">
-            <Link to={`/task/${taskId}/user/${note.userId}/addnote`}
+            <Link to={`/task/${taskId}/user/${userId}/addnote`}
             >
               <button className='addNote'>+ Add Note</button>
             </Link>
             <h1>{note.notes}</h1>
-            <Link to={`/task/${taskId}/note/${note.id}`} state={{ origNote: note }}>
+            <Link to={`/task/${taskId}/user/${userId}/editnote`} state={{ origNote: note }}>
               <button>Edit Note</button>
             </Link>
             <FaTrashAlt
