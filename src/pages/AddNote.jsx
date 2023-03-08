@@ -1,20 +1,25 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
-
+import { UpdateNotes } from '../services/TaskServices'
 const AddNote = () => {
     let navigate = useNavigate()
     const { taskId } = useParams()
+    const { userId } = useParams()
     const [newNote, setNewNote] = useState({ notes: '' })
+    // GET USERID
+    console.log(userId)
+    console.log(taskId)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const newNotePackage = {
             notes: newNote.notes
         }
-        const response = await axios.put(`/usrtasks/${taskId}`, newNotePackage)
-        console.log(response)
-        navigate(`/task/${taskId}`)
+        const res = await UpdateNotes(taskId, userId, newNotePackage)
+        setNewNote(res)
+        // console.log(response)
+        navigate(`/task/${taskId}/user/${userId}`)
     }
 
     const handleChange = (e) => {
