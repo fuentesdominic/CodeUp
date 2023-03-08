@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaTrashAlt } from "react-icons/fa";
-import { GetNotesById } from "../services/TaskServices";
+import { GetNotesById, DeleteNotesById } from "../services/TaskServices";
 import axios from "axios";
 
 const Notes = () => {
@@ -25,9 +25,19 @@ const Notes = () => {
     getNotes();
   }, []);
 
-  const handleDelete = async (id) => {
-    await axios.delete(`/`);
-    getNotes();
+  // const handleDelete = async (id) => {
+  //   await axios.delete(`/`);
+  //   getNotes();
+  // };
+
+  const handleDelete = async (taskId, userId) => {
+    try {
+      const res = await DeleteNotesById(taskId, userId);
+      getNotes(res);
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -49,7 +59,7 @@ const Notes = () => {
               <button>Edit Note</button>
             </Link>
             <FaTrashAlt
-              onClick={() => handleDelete()}
+              onClick={() => handleDelete(note.taskId, note.userId)}
               role="button"
               tabIndex="0"
               aria-label={`Delete ${note.id}`}
