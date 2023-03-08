@@ -37,19 +37,18 @@ const Notes = () => {
         {allNotes.map((note) => (
           <div className="note">
             <Link to={`/task/${taskId}/user/${note.userId}/addnote`}
-            //  state={{ oldNote: note }}
             >
               <button className='addNote'>+ Add Note</button>
             </Link>
             <h1>{note.notes}</h1>
-            <Link to={`/task/${taskId}/note/${note._id}`} state={{ origNote: note }}>
+            <Link to={`/task/${taskId}/note/${note.id}`} state={{ origNote: note }}>
               <button>Edit Note</button>
             </Link>
             <FaTrashAlt
               onClick={() => handleDelete()}
               role='button'
               tabIndex='0'
-              aria-label={`Delete ${note._id}`}
+              aria-label={`Delete ${note.id}`}
               className='delete'
             />
           </div>

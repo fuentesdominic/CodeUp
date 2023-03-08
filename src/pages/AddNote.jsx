@@ -15,9 +15,10 @@ const AddNote = () => {
         const newNotePackage = {
             notes: newNote.notes
         }
-        await UpdateNotes(userId, taskId, newNotePackage)
+        const res = await UpdateNotes(userId, taskId, newNotePackage)
+        setNewNote(res)
         // console.log(response)
-        navigate(`/task/${taskId}`)
+        navigate(`/task/${taskId}/user/${userId}`)
     }
 
     const handleChange = (e) => {
