@@ -30,6 +30,18 @@ export const UpdateNotes = async (taskId, userId, newNotePackage) => {
   }
 };
 
+export const EditNotes = async (taskId, userId, updateNotePackage) => {
+  try {
+    const res = await Client.put(
+      `/usrtasks/${taskId}/user/${userId}`,
+      updateNotePackage
+    );
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const GetNotesById = async (taskId, userId) => {
   try {
     const res = await Client.get(`/usrtasks/${taskId}/user/${userId}`);
