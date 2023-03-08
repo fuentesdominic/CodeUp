@@ -2,6 +2,7 @@ import Notes from '../components/Notes'
 import { useLocation, useParams } from 'react-router-dom'
 import axios from "axios"
 import { useState, useEffect } from 'react'
+import { GetTasks } from '../services/TaskServices'
 
 const Task = () => {
   const { taskId } = useParams()
@@ -9,9 +10,9 @@ const Task = () => {
 
   const getTask = async () => {
     try {
-      const res = await axios.get(`/tasks/${taskId}`)
+      const res = await GetTasks(taskId)
       console.log(res)
-      setTask(res.data)
+      setTask(res)
 
     } catch (err) {
       console.log(err)
