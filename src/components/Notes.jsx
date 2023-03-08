@@ -33,8 +33,8 @@ const Notes = () => {
   const handleDelete = async (taskId, userId) => {
     try {
       const res = await DeleteNotesById(taskId, userId);
-      getNotes(res);
-      console.log(res);
+      getNotes();
+      // console.log(res);
     } catch (err) {
       console.log(err);
     }
