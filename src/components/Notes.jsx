@@ -8,6 +8,8 @@ const Notes = () => {
   // const { userTaskId } = useParams()
   const { taskId } = useParams()
   console.log(taskId)
+
+
   const getNotes = async (e) => {
     try {
       let res = await axios.get(`/usrtasks/${taskId}`)
@@ -34,7 +36,7 @@ const Notes = () => {
       <div className="notesContainer">
         {allNotes.map((note) => (
           <div className="note">
-            <Link to={`/task/${taskId}/addnote`}
+            <Link to={`/task/${taskId}/user/${note.userId}/addnote`}
             //  state={{ oldNote: note }}
             >
               <button className='addNote'>+ Add Note</button>

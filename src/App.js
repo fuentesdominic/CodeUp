@@ -62,7 +62,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/tasks/:category" element={<Category />} />
           <Route path="/:category/:task/:notes" element={<Notes />} />
-          <Route path="/task/:taskId/addnote" element={<AddNote />} />
+          <Route path="/task/:taskId/user/:userId/addnote" element={<AddNote />} />
           <Route path="/task/:taskId" element={<Task />} />
         </Routes>
       </main>
