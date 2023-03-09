@@ -48,7 +48,7 @@ function App() {
       <main>
         <Routes>
           <Route
-            path="/signin"
+            path="/"
             element={
               <SignIn
                 setUser={setUser}
@@ -59,7 +59,7 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/tasks/:category" element={<Category />} />
           <Route path="/task/:taskId/user/:userId" element={<Task />} />
