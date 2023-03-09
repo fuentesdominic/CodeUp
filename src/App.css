@@ -192,7 +192,59 @@ and (orientation: landscape) {
         background-color: #080710;
         color: #ffffff
       }
+      .homepageicons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 2rem;
+      }
       
+      .homepageicons div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+      }
+      
+      .homepageicons h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-top: 1rem;
+      }
+      
+      .homepageicons img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        transition: transform 0.5s;
+      }
+      
+      .homepageicons img:hover {
+        transform: scale(1.1);
+        animation: bounce 0.5s;
+      }
+      
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      .homepageicons a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+
       header {
         position: relative;
         z-index: 1;
