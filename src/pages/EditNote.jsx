@@ -27,10 +27,14 @@ const EditNote = () => {
             [e.target.name]: e.target.value
         })
     }
+    const videoUrl = "https://i.imgur.com/dnaHMWQ.mp4";
 
     return (
         <main>
             <div className='updateNote'>
+            <video className="background-video" autoPlay loop muted>
+        <source src={videoUrl} type="video/mp4" />
+      </video>
                 <h1 className='updateNoteTitle'> Update Note</h1>
                 <form onSubmit={handleSubmit} className="updateNoteForm">
                     <div className="updatenote">
