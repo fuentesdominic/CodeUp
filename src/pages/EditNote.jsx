@@ -1,5 +1,4 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios'
 import { useState } from 'react'
 import { EditNotes } from '../services/TaskServices'
 // 
@@ -7,7 +6,6 @@ const EditNote = () => {
     let navigate = useNavigate()
     const location = useLocation()
     const { origNote } = location.state
-    console.log(origNote)
 
     const { taskId } = useParams()
     const { userId } = useParams()
@@ -32,13 +30,12 @@ const EditNote = () => {
     return (
         <main>
             <div className='updateNote'>
-            <video className="background-video" autoPlay loop muted>
-        <source src={videoUrl} type="video/mp4" />
-      </video>
-                <h1 className='updateNoteTitle'> Update Note</h1>
+                <video className="background-video" autoPlay loop muted>
+                    <source src={videoUrl} type="video/mp4" />
+                </video>
+                <h1 className='updateNoteTitle'> Edit Your Note</h1>
                 <form onSubmit={handleSubmit} className="updateNoteForm">
                     <div className="updatenote">
-                        <label htmlFor="noteTitle">Note Content</label>
                         <textarea
                             name="notes"
                             id="noteContent"

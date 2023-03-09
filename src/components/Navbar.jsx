@@ -39,7 +39,7 @@ const Nav = ({ user, handleLogOut }) => {
         <div className="logo-wrapper" alt="logo"></div>
       </Link>
       <div className="welcome-message-container">
-        {user && <h3 className="welcome-message">Welcome {user.email}!</h3>}
+        {user && <h3 className="welcome-message">Welcome {user.name}!</h3>}
       </div>
       <div className="nav-container">
         {user ? userOptions : publicOptions}

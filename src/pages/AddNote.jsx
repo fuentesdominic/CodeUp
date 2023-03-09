@@ -1,5 +1,4 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import axios from 'axios'
 import { useState } from 'react'
 import { UpdateNotes } from '../services/TaskServices'
 const AddNote = () => {
@@ -7,9 +6,6 @@ const AddNote = () => {
     const { taskId } = useParams()
     const { userId } = useParams()
     const [newNote, setNewNote] = useState({ notes: '' })
-    // GET USERID
-    console.log(userId)
-    console.log(taskId)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -18,7 +14,6 @@ const AddNote = () => {
         }
         const res = await UpdateNotes(taskId, userId, newNotePackage)
         setNewNote(res)
-        // console.log(response)
         navigate(`/task/${taskId}/user/${userId}`)
     }
 

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
 import { GetCategory } from '../services/TaskServices'
 
 
@@ -12,14 +11,12 @@ const Task = () => {
     try {
       const res = await GetCategory(category);
       setAllTasks(res);
-      console.log(res);
     } catch (err) {
       console.log(err);
     }
   };
 
   const userId = localStorage.getItem('userId');
-  console.log(userId);
 
   useEffect(() => {
     getAllTasks();
