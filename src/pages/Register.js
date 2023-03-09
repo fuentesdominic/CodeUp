@@ -34,9 +34,13 @@ const Register = () => {
     navigate('/signin') 
     console.log(formValues)
   }
+  const videoUrl = "https://i.imgur.com/Jq3AemP.mp4";
 
   return (
     <div className="signin col">
+      <video className="fullscreen-video" autoPlay loop muted>
+        <source src={videoUrl} type="video/mp4" />
+      </video>
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
@@ -44,7 +48,7 @@ const Register = () => {
             <input
               onChange={handleChange}
               name="name"
-              type="text"
+              type="name"
               placeholder="John Smith"
               value={formValues.name}
               required
