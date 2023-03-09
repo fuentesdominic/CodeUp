@@ -22,7 +22,7 @@
 
 ---
 
-### Click to use CodeUp: [CodeUp](Need Link)
+### Click to use CodeUp: [CodeUp](https://code-up.vercel.app/register)
 
 ![Register Page](https://i.imgur.com/FtMX9m2.png)
 
