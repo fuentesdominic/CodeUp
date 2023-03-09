@@ -24,7 +24,11 @@
 
 ### Click to use CodeUp: [CodeUp](Need Link)
 
-![Image](Image Needed)
+![Register Page](https://i.imgur.com/FtMX9m2.png)
+
+![Home Page](https://i.imgur.com/8nHUnnt.png)
+
+![Task Page](https://i.imgur.com/NrbL6On.png)
 
 ### CodeUp helps track software engineers educational progress:
 
