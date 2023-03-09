@@ -184,6 +184,16 @@ and (orientation: landscape) {
         height: 100%;
         object-fit: cover;
       }
+
+      .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
       
     body {
         margin: 0;
@@ -593,7 +603,94 @@ and (orientation: landscape) {
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
           }
          
-          
+          /* Main container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  
+  /* Form container */
+  .updateNote {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(175, 170, 170, 0.10);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+
+  .updateNote a {
+    position: relative;
+    z-index: 1;
+  }
+  /* Form title */
+  .updateNoteTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #8b8a8a;
+  }
+  
+  /* Form input container */
+  .updatenote {
+    margin-bottom: 20px;
+  }
+  
+  /* Form label */
+  .updatenote label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8b8a8a;
+  }
+  
+  /* Form textarea */
+  .updatenote textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    color: #333;
+  }
+  
+  /* Submit button */
+  .updateNoteSubmit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .updateNoteSubmit:hover {
+    background-color: #0069d9;
+  }
+  
+  /* Form error message */
+  .updateNoteError {
+    color: red;
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
           
           
           
