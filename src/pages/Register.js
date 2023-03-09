@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { RegisterUser } from '../services/Auth' 
-import { useNavigate } from 'react-router-dom' 
+import { RegisterUser } from '../services/Auth'
+import { useNavigate } from 'react-router-dom'
 
 
 const Register = () => {
@@ -26,12 +26,12 @@ const Register = () => {
       password: formValues.password
     })
     setFormValues({
-      name:'',
-      email:'',
-      password: '', 
+      name: '',
+      email: '',
+      password: '',
       confirmPassword: ''
     })
-    navigate('/signin') 
+    navigate('/')
     console.log(formValues)
   }
   const videoUrl = "https://i.imgur.com/Jq3AemP.mp4";
