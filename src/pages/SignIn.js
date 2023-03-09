@@ -14,10 +14,10 @@ const SignIn = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await SignInUser(formValues)
-    setFormValues({ email: '', password: ''})
+    setFormValues({ email: '', password: '' })
     props.setUser(payload)
     props.toggleAuthenticated(true)
-    navigate('/')
+    navigate('/home')
   }
 
   const videoUrl = "https://i.imgur.com/Jq3AemP.mp4";
