@@ -6,13 +6,13 @@ const Nav = ({ user, handleLogOut }) => {
   if (user) {
     userOptions = (
       <nav className="nav-links">
-        <Link className="nav-link" to="/">
+        <Link className="nav-link" to="/home">
           Home
         </Link>
         <Link className="nav-link" to="/about">
           About
         </Link>
-        <Link className="nav-link" onClick={handleLogOut} to="/signin">
+        <Link className="nav-link" onClick={handleLogOut} to="/">
           Sign Out
         </Link>
       </nav>
@@ -24,7 +24,7 @@ const Nav = ({ user, handleLogOut }) => {
       <Link className="nav-link" to="/register">
         Register
       </Link>
-      <Link className="nav-link" to="/signin">
+      <Link className="nav-link" to="/">
         Sign In
       </Link>
       <Link className="nav-link" to="/about">
