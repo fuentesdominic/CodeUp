@@ -11,7 +11,7 @@ const Task = () => {
   const getTask = async () => {
     try {
       const res = await GetTasks(taskId)
-      console.log(res)
+      // console.log(res)
       setTask(res)
 
     } catch (err) {
