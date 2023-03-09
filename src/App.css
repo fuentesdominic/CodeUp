@@ -178,7 +178,7 @@ and (orientation: landscape) {
 
     .fullscreen-video {
         position: fixed;
-        top: 10px;
+        top: 0px;
         left: 0;
         width: 100%;
         height: 100%;
@@ -192,31 +192,53 @@ and (orientation: landscape) {
         background-color: #080710;
       }
       
-      .header {
-        display: flex;
+      header {
+        position: relative;
+        z-index: 1;
         justify-content: space-between;
         align-items: center;
-        background-color: #ffffff;
-        padding: 1rem;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        background-color: rgba(141, 141, 141, 0.13);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
       
-      .logo {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #2c3e50;
-      }
-      
-      .nav {
+      .logo-wrapper {
         display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
       }
       
-      .nav a {
-        color: #2c3e50;
+      .logo-wrapper img {
+        height: 50px;
+        margin-right: 10px;
+      }
+      
+      .logo-wrapper h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+      
+      .nav-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-link {
+        margin-right: 20px;
         text-decoration: none;
-        margin-left: 1rem;
-        font-size: 1.2rem;
+        color: #979797;
         font-weight: bold;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        color: #007bff;
       }
       
       
@@ -283,6 +305,7 @@ and (orientation: landscape) {
         color: #ffffff;
       }
       
+      input[type="name"],
       input[type="email"],
       input[type="password"] {
         display: block;
@@ -302,7 +325,7 @@ and (orientation: landscape) {
       
       
       button {
-        background-color: #ffffff;
+        background-color: #f7f1f1fc;
         color: #080710;
         padding: 1.2rem 2rem;
         border: none;
