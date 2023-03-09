@@ -5,29 +5,33 @@ import { GetNotesById, DeleteNotesById, CreateNewNotes } from "../services/TaskS
 import axios from "axios";
 
 const Notes = () => {
-  const [allNotes, setAllNotes] = useState([]);
+  const [allNotes, setAllNotes] = useState({});
   const { userId } = useParams();
   const { taskId } = useParams();
-  console.log(taskId);
-  console.log(userId);
-  console.log(allNotes)
+  // console.log(taskId);
+  // console.log(userId);
+  // console.log(allNotes)
 
   const getNotes = async (e) => {
     try {
       const res = await GetNotesById(taskId, userId);
-      setAllNotes(res);
+      setAllNotes(res[0]);
       console.log(res);
     } catch (err) {
       console.log(err);
     }
   };
 
+  console.log(allNotes)
+
   const handleSubmit = async (evt) => {
     evt.preventDefault()
     console.log('button clicked')
     const res = await CreateNewNotes(taskId, userId)
-    setAllNotes(res)
-  } 
+    // setAllNotes(res[0])
+    getNotes()
+    console.log(res[0])
+  }
 
   useEffect(() => {
     getNotes();
@@ -47,39 +51,40 @@ const Notes = () => {
       console.log(err);
     }
   };
-
+  // console.log(allNotes)
   return (
     <div className="notes">
       <h1 className="noteTitle">Notes</h1>
-        <button className="createNote" onClick={handleSubmit}>Create Note</button>
+
       <div className="notesContainer">
-        {allNotes.map((note) => (
-          <div className="note">
-            {/* {allNotes.length > 0 ? null : ( */}
-            <Link to={`/task/${taskId}/user/${userId}/addnote`}>
+
+        {!allNotes ?
+          (<button className="createNote" onClick={handleSubmit}>Create Note</button>) :
+          (<div className="allnotes">
+            {/* <Link to={`/task/${taskId}/user/${userId}/addnote`}>
               <button className="addNote">+ Add Note</button>
-            </Link>
+            </Link> */}
+            <h1>{allNotes.notes}</h1>
 
-
-            {/* )} */}
-            <h1>{note.notes}</h1>
             <Link
               to={`/task/${taskId}/user/${userId}/editnote`}
-              state={{ origNote: note }}
+              state={{ origNote: allNotes }}
             >
               <button>Edit Note</button>
             </Link>
             <FaTrashAlt
-              onClick={() => handleDelete(note.taskId, note.userId)}
+              onClick={() => handleDelete(allNotes.taskId, allNotes.userId)}
               role="button"
               tabIndex="0"
-              aria-label={`Delete ${note.id}`}
+              aria-label={`Delete ${allNotes.id}`}
               className="delete"
             />
-          </div>
-        ))}
-      </div>
-    </div>
+          </div>)
+        }
+        {/* </div> */}
+        {/* ))} */}
+      </div >
+    </div >
   );
 };
 export default Notes;
