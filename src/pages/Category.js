@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import { GetCategory } from '../services/TaskServices'
+
 
 const Task = () => {
   const { category } = useParams();
@@ -18,22 +18,27 @@ const Task = () => {
     }
   };
 
-  const userId = localStorage.getItem('userId')
-  console.log(userId)
-
+  const userId = localStorage.getItem('userId');
+  console.log(userId);
 
   useEffect(() => {
     getAllTasks();
   }, []);
 
+  const videoUrl = "https://i.imgur.com/dnaHMWQ.mp4";
+
   return (
     <div className="category">
+      <video className="fullscreen-video" autoPlay loop muted>
+        <source src={videoUrl} type="video/mp4" />
+      </video>
       {allTasks.map((task) => (
-        <Link to={`/task/${task.id}/user/${userId}`}>
+        <Link key={task.id} to={`/task/${task.id}/user/${userId}`}>
           <h2>{task.title}</h2>
         </Link>
       ))}
     </div>
   );
 };
+
 export default Task;

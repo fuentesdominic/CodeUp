@@ -476,4 +476,128 @@ and (orientation: landscape) {
         cursor: not-allowed;
       }
       
+      .task-container {
+        margin: 50px auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 20px #ccc;
+        max-width: 800px;
+        background-color: #f2f2f2;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        }
+        
+        .task-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        text-align: center;
+        }
+        
+        .task-title {
+        font-size: 36px;
+        margin: 0;
+        color: #444;
+        text-align: center;
+        }
+        
+        .task-video-link {
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        background: linear-gradient(to right, #0077cc, #0077cc 50%, #fff 50%);
+        background-size: 200% 100%;
+        background-position: left bottom;
+        border: 2px solid #0077cc;
+        margin-left: 20px;
+        }
+        
+        .task-video-link:hover {
+        background-position: right bottom;
+        color: #0077cc;
+        transform: scale(1.1);
+        }
+        
+        .task-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 30px;
+        text-align: center;
+        }
+        
+        .task-description {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-right: 50px;
+        flex-basis: 60%;
+        text-align: center;
+        color: #444;
+        }
+        
+        .task-notes {
+        flex-basis: 35%;
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        color: #444;
+        background-color: #fff;
+        }
+        
+        .task-notes-header {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #444;
+        }
+        
+        .task-category {
+        font-size: 20px;
+        margin-top: 30px;
+        text-transform: uppercase;
+        color: #0077cc;
+        font-weight: bold;
+        text-align: center;
+        }
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          
+          .category a {
+            position: relative;
+            z-index: 1;
+          }
+          .category h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1rem;
+            padding: 1rem;
+            text-align: center;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .category h2:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+          }
+         
+          
+          
+          
+          
+      
+      
+      
       
