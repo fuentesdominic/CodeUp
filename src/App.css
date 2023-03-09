@@ -176,7 +176,15 @@ and (orientation: landscape) {
 @media only screen 
     and (device-width: 1440px) {}
 
-
+    .fullscreen-video {
+        position: fixed;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
     body {
         margin: 0;
         padding: 0;
@@ -225,11 +233,11 @@ and (orientation: landscape) {
         top: 50%;
         right: 20%;
         transform: translate(50%, -50%);
-        background-color: rgba(255,255,255,0.13);
+        background-color: rgba(141, 141, 141, 0.13);
         box-shadow: 0 0 40px rgba(8,7,16,0.6);
         padding: 30px 25px;
         border-radius: 10px;
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
         border: 2px solid rgba(255,255,255,0.1);
         max-width: 400px;
         width: 400px;

@@ -20,11 +20,16 @@ const SignIn = (props) => {
     navigate('/')
   }
 
+  const videoUrl = "https://i.imgur.com/Jq3AemP.mp4";
+
   return (
     <div className="signin col">
+      <video className="fullscreen-video" autoPlay loop muted>
+        <source src={videoUrl} type="video/mp4" />
+      </video>
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
-          <h3> Signin Here </h3>
+          <h3> SIGN IN </h3>
           <div className="input-wrapper">
             <label htmlFor="email">Email</label>
             <input
