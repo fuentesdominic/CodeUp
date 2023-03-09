@@ -68,3 +68,12 @@ export const GetCategory = async (category) => {
     throw error;
   }
 };
+
+export const CreateNewNotes = async (taskId, userId) => {
+  try {
+    const res = await Client.post(`/usrtasks/${taskId}/user/${userId}`);
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
