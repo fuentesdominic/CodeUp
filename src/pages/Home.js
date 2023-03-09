@@ -17,7 +17,7 @@ const Home = () => {
         </Link>
       </div>
       <div>
-        <h2 className="homepagetext">Javascript</h2>
+        <h2 className="homepagetext">JavaScript</h2>
         <Link to={`/tasks/javascript`}>
           <img
             className="homepageicons"
