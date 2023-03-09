@@ -4,6 +4,7 @@ import axios from "axios"
 import { useState, useEffect } from 'react'
 import { GetTasks } from '../services/TaskServices'
 
+
 const Task = () => {
   const { taskId } = useParams()
   const [task, setTask] = useState([])
@@ -11,9 +12,7 @@ const Task = () => {
   const getTask = async () => {
     try {
       const res = await GetTasks(taskId)
-      // console.log(res)
       setTask(res)
-
     } catch (err) {
       console.log(err)
     }
@@ -23,18 +22,24 @@ const Task = () => {
     getTask()
   }, [])
 
-
   return (
-    <div className='task'>
-      <h1>{task.title}</h1>
-      <p>{task.content}</p>
-      <a href={task.videoLink}>Video Link</a>
-      <p>Category: {task.category}</p>
-      <p>Notes: <div>
-        <Notes taskId={task.id} />
+    <div className='task-container'>
+      <h3 className='task-category'>Category: {task.category}</h3>
+      <div className='task-header'>
+        <h1 className='task-title'>{task.title}</h1>
+        <a href={task.videoLink} className='task-video-link'target="_blank" rel="noopener noreferrer">Watch Video</a>
       </div>
-      </p>
-    </div >
+      <div className='task-content'>
+        <p className='task-description'>{task.content}</p>
+        <div className='task-notes'>
+          <h2 className='task-notes-header'>WRITE YOUR NOTES</h2>
+          <Notes taskId={task.id} />
+        </div>
+      </div>
+  
+    </div>
   )
 }
+
 export default Task
+
