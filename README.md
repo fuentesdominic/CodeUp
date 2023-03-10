@@ -37,10 +37,6 @@
 - Keep track of your skills and lessons
 - Be able to make notes for each lesson
 
-* Create a user.
-* Login and see your dashboard
-* Keep track of your skills and lessons
-
 ## **_Technologies Used_**
 
 ---
@@ -54,8 +50,9 @@
 - [Insomnia](https://insomnia.rest/download) - For testing express commands (Connected to your database)
 - [cors](https://www.npmjs.com/package/cors) - For enabling cross origin resource sharing.
 - [morgan](https://www.npmjs.com/package/morgan) - For logging HTTP requests.
-- [Heroku](https://www.heroku.com) - To deploy app
+- [Heroku](https://www.heroku.com) - To deploy back-end
 - [Favicon](https://favicon.io/favicon-converter/) - To create favicon icon
+- [Vercel](https://vercel.com/) - To deploy front-end
 
 ## **_Materials Used_**
 
@@ -66,7 +63,9 @@
 
 ## **_Future Features_**
 
-- Future Updates To Come
+- Add profile page with update password/name/email
+- Create more than one note per lesson
+- Be able to remove a lesson if it's been completed
 
 ## **_Credits_**
 
